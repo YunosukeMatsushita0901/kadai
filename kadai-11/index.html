@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+     button {
+         font-size: 60px;
+     }
+</style>
+</head>
+<body>
+    <button id="button">おみくじを引く</button>
+    <script>
+       const button = document.getElementById('button')
+       button.addEventListener('click', () => {
+           fetch('https://4000-a564341c-9322-44e9-ad02-3e700b7a94ac.ws-ap01.gitpod.io/')
+                .then(res => res.text())
+                .then(data => alert(data))
+       })
+    </script>
+</body>
+</html>    
